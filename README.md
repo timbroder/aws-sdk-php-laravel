@@ -107,10 +107,10 @@ the SDK's User Guide.
 ## Usage
 
 In order to use the AWS SDK for PHP within your app, you need to retrieve it from the [Laravel IoC
-Container](http://laravel.com/docs/ioc). The following example uses the Amazon S3 client to upload a file.
+Container](http://laravel.com/docs/container). The following example uses the Amazon S3 client to upload a file.
 
 ```php
-$s3 = App::make('aws')->createClient('s3');
+$s3 = app('aws')->createClient('s3');
 $s3->putObject(array(
     'Bucket'     => 'YOUR_BUCKET',
     'Key'        => 'YOUR_OBJECT_KEY',
